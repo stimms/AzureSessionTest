@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Session Test</h1>
+    <p class="lead">This is a test to experiment with using azure cache.</p>
+    <p><a href="http://www.windowsazure.com/en-us/services/cache/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Current Server</h2>
+        <p>
+            This web page is currently running on a machine called:<b>
+                @Environment.MachineName
+            </b>
+        </p>
+        <p>
+            The current session mode is <b>@Session.Mode</b>
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Insert Value into Session</h2>
+        <p>Adding a value to the session can be done here</p>
+        <form>
+            <input type="text" name="sessionValue" /><input type="submit" value="Add to session"/>
+        </form>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Session Value</h2>
+        <p>The value is retrieved from the session here: @Session["testValue"]</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
